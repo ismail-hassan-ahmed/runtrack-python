@@ -10,7 +10,7 @@ class Auteur(Personne):
         self.oeuvre = []
 
     def listerOeuvre(self):
-        print(f"{self.prenom} {self.nom} a écrit :")
+        print(f"{self.prenom} {self.nom} has written :")
         for livre in self.oeuvre:
             print(livre.titre)
 
@@ -27,18 +27,16 @@ class Livre:
     def print(self):
         print(self.titre)
 
-# Création d'un auteur et de ses livres
-auteur1 = Auteur("Ismail", "Hassan")
-auteur1.ecrireUnLivre("Mangez tous ce qui vous mange pas")
-auteur1.ecrireUnLivre("")
-auteur1.ecrireUnLivre("Les Contemplations")
+author1 = Auteur("Ismail", "Hassan")
+author1.ecrireUnLivre("Mangez tous ce qui vous mange pas")
+author1.ecrireUnLivre("La vie est belle")
 
-# Affichage de la liste des livres de l'auteur
-auteur1.listerOeuvre()
 
-# Création d'un autre auteur et d'un livre
-auteur2 = Auteur("Zola", "Emile")
-livre1 = Livre("Germinal", auteur2)
+author1.listerOeuvre()
 
-# Affichage du titre d'un livre
-livre1.print()
+
+author2 = Auteur("Noura", "Ali")
+book1 = Livre("Yahou", author2)
+
+
+book1.print()
